@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Para Lilicita🩵</title>
+<title>Para Mi Lilicita🩵</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
 :root{--bg1:#04122e;--bg2:#0b2a63;--sky:#7cc4ff;--ice:#cfeaff;--glow:#4aa8ff;--card:rgba(255,255,255,.08);--txt:#eaf5ff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -97,7 +97,7 @@ button:active{transform:scale(.94)}
     <p>Eres una de las cosas más bonitas que me han pasado, y le agradezco a la vida haberte encontrado. 🩵</p>
   </div>
   <div class="dots" id="dots"></div>
-  <button id="next">Siguiente 🩵</button>
+  <button id="next">Siguiente🩵</button>
 </section>
 
 <section id="perdon" class="fade">
@@ -117,7 +117,7 @@ button:active{transform:scale(.94)}
   <h2>Una última pregunta…</h2>
   <p style="max-width:460px">¿Me dejas seguir conociéndote, cuidándote y haciéndote reír, un día a la vez?</p>
   <div class="q"><button id="yes">Sí, mi amor 🩵</button><button id="no" style="background:#2a4f8f;color:#cfeaff;box-shadow:none">No</button></div>
-  <div id="fin" class="script">Feliz cumpleaños, Lilibeth. Me haces muy feliz. 🩵<br><span style="font-size:.6em;opacity:.85;font-family:'Cormorant Garamond',serif">Gracias por estar en mi vida. Este es solo el comienzo.</span></div>
+  <div id="fin" class="script">Feliz cumpleaños, Mi Amor. Me haces muy feliz. 🩵<br><span style="font-size:.6em;opacity:.85;font-family:'Cormorant Garamond',serif">Gracias por estar en mi vida. Este es solo el comienzo.</span></div>
 </section>
 </div>
 
@@ -134,7 +134,7 @@ const ps=[...document.querySelectorAll('#letter p')];let i=0;
 function show(){ps.forEach((p,k)=>p.classList.toggle('on',k===i));$('#dots').textContent=ps.map((_,k)=>k<=i?'🩵':'·').join(' ')}
 show();
 $('#next').onclick=()=>{if(i<ps.length-1){i++;show()}else{burst(40);$('#next').textContent='Ahora, déjame abrirte mi corazón ↓';setTimeout(()=>$('#perdon').scrollIntoView({behavior:'smooth'}),900)}};
-const ap=['Disculpame por las veces que te fallé, por las palabras que dolieron.','Discúlpame por los silencios cuando debí abrazarte y por las lágrimas que no debí causarte.','No soy perfecto, pero te prometo escucharte mejor, cuidarte más y tratarte bien con hechos, no solo con palabras.','Gracias por quedarte, por perdonar y por seguir creyendo en nosotros. 🩵'];
+const ap=['Disculpame por las veces que hice algo que te molestara, por las palabras que dolieron.','Discúlpame por los silencios cuando debí abrazarte y por las lágrimas que no debí causarte.','No soy perfecto, pero te prometo escucharte mejor, cuidarte más y tratarte bien con hechos, no solo con palabras.','Gracias por quedarte, por perdonar y por seguir creyendo en nosotros. 🩵'];
 let t=0;$('#hrt').onclick=()=>{const h=$('#hrt');if(t<ap.length)$('#apo').textContent=ap[t];t++;h.style.filter=`grayscale(${Math.max(0,1-t/3)}) brightness(${.6+Math.min(t,3)*.13})`;h.style.transform='scale(1.2)';setTimeout(()=>h.style.transform='',200);if(t>=3)h.classList.add('b');if(t===ap.length){burst(45)}};
 const rs=[['Tu sonrisa','Ilumina hasta mis días más grises.'],['Tu corazón','Tan noble y tan tierno que me enseña a ser mejor.'],['Tu forma de ser','Contigo todo se siente como hogar.'],['Tu fuerza','Me inspira a nunca rendirme.'],['Tu compañía','Contigo todo se siente tranquilo y bonito.'],['Que seas tú','Simplemente tú. Eso me basta.']];
 rs.forEach(([a,b])=>{const c=document.createElement('div');c.className='c';c.innerHTML=`<div><span class="a">🩵</span><span class="z"><b>${a}<br></b>${b}</span></div>`;c.onclick=()=>{c.classList.toggle('f');burst(8)};$('#grid').appendChild(c)});
