@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Para Lilibeth 🩵</title>
+<title>Para Lilicita🩵</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
 :root{--bg1:#04122e;--bg2:#0b2a63;--sky:#7cc4ff;--ice:#cfeaff;--glow:#4aa8ff;--card:rgba(255,255,255,.08);--txt:#eaf5ff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -65,7 +65,7 @@ button:active{transform:scale(.94)}
 
 <section id="gate">
   <p class="script" style="font-size:clamp(22px,7vw,28px);opacity:.9">Hoy es un día muy especial…</p>
-  <h1>Para Lilibeth 🩵</h1>
+  <h1>Mi Amor🩵</h1>
   <p class="sub">Hay algo que quiero decirte desde el corazón</p>
   <div class="env" id="env"><div class="body"></div><div class="flap"></div><div class="seal">🩵</div></div>
   <button id="openBtn">Abrir mi carta 🩵</button>
@@ -73,7 +73,7 @@ button:active{transform:scale(.94)}
 
 <div id="main">
 <section id="bday" class="fade">
-  <h2>¡Feliz cumpleaños, Lilibeth!</h2>
+  <h2>¡Feliz cumpleaños, Mi Amor!</h2>
   <p class="sub">Pide un deseo y toca el pastel para apagar las velas</p>
   <div class="cake" id="cake" style="margin-top:30px">
     <div class="candles"><span class="fl">🔥</span><span class="fl">🔥</span><span class="fl">🔥</span></div>🎂
@@ -90,7 +90,7 @@ button:active{transform:scale(.94)}
 <section id="carta" class="fade">
   <h2>Lo que mi corazón quiere decirte</h2>
   <div class="letter" id="letter">
-    <p>Lilibeth, hoy el mundo celebra que existes, y yo celebro, además, que me dejaste entrar en tu vida.</p>
+    <p>Mi amor, hoy el mundo celebra que existes, y yo celebro, además, que me dejaste entrar en tu vida.</p>
     <p>Contigo he aprendido que las cosas bonitas no son perfectas: se cuidan, se intentan otra vez y se eligen cada día.</p>
     <p>Tienes una sonrisa que me desarma y una forma de mirar que me hace sentir en casa.</p>
     <p>Gracias por tu paciencia, por tu ternura, por cada abrazo que me sostuvo cuando ni yo sabía cómo hacerlo.</p>
@@ -101,8 +101,8 @@ button:active{transform:scale(.94)}
 </section>
 
 <section id="perdon" class="fade">
-  <h2>Perdóname</h2>
-  <p class="sub">Toca el corazón. Quiero sanar lo que dolió.</p>
+  <h2>Discúlpame</h2>
+  <p class="sub">Toca el corazón.</p>
   <div class="heart" id="hrt">🩵</div>
   <div class="apo" id="apo">Hay cosas que quiero decirte con humildad…</div>
 </section>
@@ -134,7 +134,7 @@ const ps=[...document.querySelectorAll('#letter p')];let i=0;
 function show(){ps.forEach((p,k)=>p.classList.toggle('on',k===i));$('#dots').textContent=ps.map((_,k)=>k<=i?'🩵':'·').join(' ')}
 show();
 $('#next').onclick=()=>{if(i<ps.length-1){i++;show()}else{burst(40);$('#next').textContent='Ahora, déjame abrirte mi corazón ↓';setTimeout(()=>$('#perdon').scrollIntoView({behavior:'smooth'}),900)}};
-const ap=['Perdóname por las veces que te fallé, por las palabras que dolieron.','Perdóname por los silencios cuando debí abrazarte y por las lágrimas que no debí causarte.','No soy perfecto, pero te prometo escucharte mejor, cuidarte más y tratarte bien con hechos, no solo con palabras.','Gracias por quedarte, por perdonar y por seguir creyendo en nosotros. 🩵'];
+const ap=['Disculpame por las veces que te fallé, por las palabras que dolieron.','Discúlpame por los silencios cuando debí abrazarte y por las lágrimas que no debí causarte.','No soy perfecto, pero te prometo escucharte mejor, cuidarte más y tratarte bien con hechos, no solo con palabras.','Gracias por quedarte, por perdonar y por seguir creyendo en nosotros. 🩵'];
 let t=0;$('#hrt').onclick=()=>{const h=$('#hrt');if(t<ap.length)$('#apo').textContent=ap[t];t++;h.style.filter=`grayscale(${Math.max(0,1-t/3)}) brightness(${.6+Math.min(t,3)*.13})`;h.style.transform='scale(1.2)';setTimeout(()=>h.style.transform='',200);if(t>=3)h.classList.add('b');if(t===ap.length){burst(45)}};
 const rs=[['Tu sonrisa','Ilumina hasta mis días más grises.'],['Tu corazón','Tan noble y tan tierno que me enseña a ser mejor.'],['Tu forma de ser','Contigo todo se siente como hogar.'],['Tu fuerza','Me inspira a nunca rendirme.'],['Tu compañía','Contigo todo se siente tranquilo y bonito.'],['Que seas tú','Simplemente tú. Eso me basta.']];
 rs.forEach(([a,b])=>{const c=document.createElement('div');c.className='c';c.innerHTML=`<div><span class="a">🩵</span><span class="z"><b>${a}<br></b>${b}</span></div>`;c.onclick=()=>{c.classList.toggle('f');burst(8)};$('#grid').appendChild(c)});
